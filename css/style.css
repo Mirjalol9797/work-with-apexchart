@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-decoration-skip: objects;
+          text-decoration-skip: objects;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 14px;
+  line-height: 140%;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  background-color: #e5e5e5;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+p {
+  margin: 0;
+}
+
+a,
+button {
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+figure,
+picture {
+  display: inline-block;
+  margin: 0;
+  line-height: 0;
+}
+
+figure img,
+picture img {
+  width: 100%;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+.site-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 25px;
+}
+
+.site-btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19.6px;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.4px;
+  padding: 8px 20px;
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.site-btn:hover {
+  background-color: rgba(251, 193, 0, 0.3);
+  border: 1px solid rgba(251, 193, 0, 0.3);
+}
+
+.site-btn.active {
+  padding: 8px 20px 8px 44px;
+  background-image: url(../img/active.svg);
+  background-repeat: no-repeat;
+  background-position: 14px center;
+  background-color: rgba(251, 193, 0, 0.3);
+  border: 1px solid rgba(251, 193, 0, 0.3);
+}
+
+.site-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 32px;
+}
+
+.site-item {
+  width: 49%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.metrika-period {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.metrika-period .site-btn {
+  margin-right: 12px;
+}
+
+.metrika-period input {
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #eeeeee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  letter-spacing: 0.4px;
+  padding: 8px 20px;
+  outline: none;
+  height: 37px;
+  margin-bottom: 28px;
+}
+
+.metrika-statistic {
+  margin-bottom: 40px;
+}
+
+.metrika-statistic .statistic-blocks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.metrika-statistic .statistic-item {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 20px 20px 32px 26px;
+}
+
+.metrika-statistic .statistic-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px;
+}
+
+.metrika-statistic .statistic-top img {
+  margin-right: 16px;
+}
+
+.metrika-statistic .statistic-count {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 120%;
+  letter-spacing: 0.4px;
+  padding-left: 40px;
+}
+
+.metrika-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.metrika-columns .column-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 16px;
+  padding: 0px 12px;
+}
+
+.metrika-columns .column-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 12px;
+}
+
+.metrika-columns .column-list:nth-child(2n + 1) {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+}
+
+.metrika-columns .column-list__title {
+  color: #336fee;
+}
+
+.metrika-columns .column-list__value {
+  font-weight: 500;
+}
+
+.metrika-pies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.daterangepicker {
+  max-width: 630px;
+  width: 100%;
+}
+
+.daterangepicker .drp-buttons {
+  padding: 12px;
+  border-top: 1px solid #eeeeee;
+}
+
+.daterangepicker .drp-buttons .btn {
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  outline: none;
+  border: 0;
+}
+
+.daterangepicker .drp-buttons .btn-primary {
+  background-color: #fbc100;
+  border: 1px solid #fbc100;
+}
+
+.daterangepicker .drp-buttons .btn-default {
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+}
+
+.daterangepicker .calendar-table .month {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000;
+}
+
+.daterangepicker .calendar-table th,
+.daterangepicker .calendar-table td {
+  width: 40px;
+  height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #333;
+  border-radius: 50px;
+}
+
+.daterangepicker .calendar-table th:hover,
+.daterangepicker .calendar-table td:hover {
+  color: #333;
+  background-color: #ececec;
+}
+
+.daterangepicker .drp-calendar {
+  max-width: 314px;
+  width: 100%;
+  padding: 12px !important;
+}
+
+.daterangepicker .drp-calendar.left {
+  margin-right: auto;
+}
+
+.daterangepicker .drp-calendar.right {
+  margin-left: auto;
+}
+
+.daterangepicker td.available {
+  border-radius: 50px;
+}
+
+.daterangepicker td.today {
+  border: 2px solid #ececec;
+  background-color: #fff;
+  color: #333;
+}
+
+.daterangepicker td.in-range {
+  background-color: rgba(251, 193, 0, 0.2);
+  border-radius: 0;
+}
+
+.daterangepicker td.start-date {
+  background-color: #fbc100;
+}
+
+.daterangepicker td.end-date {
+  background-color: #fbc100;
+  border-radius: 50px;
+}
+
+.site-line-chart {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.site-line-chart .apexcharts-title-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.site-line-chart .apexcharts-tooltip {
+  width: 200px;
+  padding: 14px 16px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.site-line-chart .apexcharts-tooltip-title {
+  color: #767676;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.site-line-chart .apexcharts-tooltip-series-group {
+  padding: 0 !important;
+  margin-bottom: 6px;
+}
+
+.site-line-chart .apexcharts-tooltip-y-group {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-line-chart .apexcharts-tooltip-marker {
+  min-width: 6px;
+  height: 6px;
+  max-width: 6px;
+  margin: 0;
+}
+
+.site-line-chart .apexcharts-tooltip-text {
+  width: 100%;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  margin-left: 8px;
+}
+
+.site-line-chart .apexcharts-xaxis line {
+  display: none;
+}
+
+.site-line-chart .apexcharts-xaxistooltip {
+  display: none;
+}
+
+.site-line-chart .apexcharts-text tspan {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #767676;
+}
+
+.site-line-chart .apexcharts-legend {
+  top: 35px !important;
+}
+
+.site-line-chart .apexcharts-legend-marker {
+  margin-right: 5px;
+}
+
+.site-line-chart .apexcharts-legend-series {
+  margin: 0 24px 0 0 !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.site-pie-chart .apexcharts-datalabels text {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.site-pie-chart .apexcharts-legend {
+  padding: 0;
+}
+
+.site-pie-chart .apexcharts-legend-series {
+  margin: 0 0 10px 0 !important;
+}
+
+.site-pie-chart .apexcharts-inner {
+  position: static;
+}
+
+.site-pie-chart .apexcharts-tooltip-series-group {
+  background-color: #fff !important;
+  color: #333 !important;
+}
+
+.site-pie-chart .apexcharts-tooltip-y-group {
+  padding: 5px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .site-container {
+    padding: 40px 20px;
+  }
+  .metrika-statistic .statistic-item {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  .site-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-container {
+    padding: 25px 10px;
+  }
+  .metrika-statistic .statistic-item {
+    width: 100%;
+  }
+}
