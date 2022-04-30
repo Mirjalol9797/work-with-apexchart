@@ -324,6 +324,46 @@ function pieChart1(response) {
   chart.render();
 }
 
+// pie-chart2
+function pieChart2(response) {
+  var options = {
+    series: [44, 55, 13, 43, 22],
+    chart: {
+      width: 420,
+      type: "donut",
+      fontFamily: "Roboto, sans-serif",
+      foreColor: "#333",
+    },
+    labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+    legend: {
+      position: "bottom",
+    },
+    plotOptions: {
+      pie: {
+        donut: {
+          size: "30%",
+        },
+        customScale: 1,
+        expandOnClick: false,
+      },
+    },
+    responsive: [
+      {
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 350,
+          },
+        },
+      },
+    ],
+  };
+
+  var chart = new ApexCharts(document.querySelector("#pie-chart2"), options);
+  chart.render();
+}
+
 chart1();
 chart2();
 pieChart1();
+pieChart2();
