@@ -1,147 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="site-metrika">
-        <div class="site-container">
-            <div class="metrika-period">
-                <a href="#" class="site-btn active">Cегодня</a>
-                <a href="#" class="site-btn">Последние 7 дней</a>
-                <a href="#" class="site-btn">За последние 30 дней</a>
-                <a href="#" class="site-btn">Этот месяц</a>
-                <a href="#" class="site-btn">Прошлый месяц</a>
-                <input type="text" id="daterange" value="" placeholder="Пользовательская" />
-            </div>
-            <div class="metrika-statistic mb-40">
-                <div class="statistic-blocks">
-                    <div class="statistic-item">
-                        <div class="statistic-top online">
-                            <div class="img">
-                                <img src="img/online.svg" alt="">
-                            </div>
-                            <div class="title"></div>
-                            Онлайн
-                        </div>
-                        <div class="statistic-count">3 245</div>
-                    </div>
-                    <div class="statistic-item">
-                        <div class="statistic-top ">
-                            <div class="img">
-                                <img src="img/phone.svg" alt="">
-                            </div>
-                            <div class="title"></div>
-                            По звонку
-                        </div>
-                        <div class="statistic-count">2 751</div>
-                    </div>
-                    <div class="statistic-item">
-                        <div class="statistic-top ">
-                            <div class="img">
-                                <img src="img/cancel.svg" alt="">
-                            </div>
-                            <div class="title"></div>
-                            Отказов
-                        </div>
-                        <div class="statistic-count">56</div>
-                    </div>
-                </div>
-                <div id="chart1" class="site-line-chart"></div>
-            </div>
-            <div class="metrika-clicks mb-60">
-                <div id="chart2" class="site-line-chart"></div>
-            </div>
-            <div class="metrika-columns mb-60">
-                <div class="column-item site-item">
-                    <div class="column-title site-title">Запросы с результатами</div>
-                    <div class="column-head">
-                        <div class="column-head__title">Запрос</div>
-                        <div class="column-head__count">Кол.</div>
-                    </div>
-                    <div class="column-wrap">
-                        <div class="column-list">
-                            <div class="column-list__title">ноутбуки в ташкенте</div>
-                            <div class="column-list__value">1554</div>
-                        </div>
-                        <div class="column-list">
-                            <div class="column-list__title">купить смартфон в ташкенте</div>
-                            <div class="column-list__value">1924</div>
-                        </div>
-                        <div class="column-list">
-                            <div class="column-list__title">кондиционер</div>
-                            <div class="column-list__value">715</div>
-                        </div>
-                        <div class="column-list">
-                            <div class="column-list__title">honor</div>
-                            <div class="column-list__value">1154</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column-item site-item">
-                    <div class="column-title site-title">Запросы с результатами</div>
-                    <div class="column-head">
-                        <div class="column-head__title">Запрос</div>
-                        <div class="column-head__count">Кол.</div>
-                    </div>
-                    <div class="column-wrap">
-                        <div class="column-list">
-                            <div class="column-list__title">ноутбуки в ташкенте</div>
-                            <div class="column-list__value">1554</div>
-                        </div>
-                        <div class="column-list">
-                            <div class="column-list__title">купить смартфон в ташкенте</div>
-                            <div class="column-list__value">1924</div>
-                        </div>
-                        <div class="column-list">
-                            <div class="column-list__title">кондиционер</div>
-                            <div class="column-list__value">715</div>
-                        </div>
-                        <div class="column-list">
-                            <div class="column-list__title">honor</div>
-                            <div class="column-list__value">1154</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="metrika-pies mb-60">
-                <div class="pie-item site-item">
-                    <div class="pie-title site-title">
-                        Запросы с результатами
-                    </div>
-                    <div id="pie-chart1" class="site-pie-chart"></div>
-                </div>
-                <div class="pie-item site-item">
-                    <div class="pie-title site-title">
-                        Тип устройства
-                    </div>
-                    <div id="pie-chart2" class="site-pie-chart"></div>
-                </div>
-            </div>
-            <div class="metrika-visitors">
-                <div id="chart3" class="site-line-chart"></div>
-            </div>
+      <div class="site-container">
+        <div class="metrika-period">
+          <a href="#" class="site-btn active">Cегодня</a>
+          <a href="#" class="site-btn">Последние 7 дней</a>
+          <a href="#" class="site-btn">За последние 30 дней</a>
+          <a href="#" class="site-btn">Этот месяц</a>
+          <a href="#" class="site-btn">Прошлый месяц</a>
+          <input
+            type="text"
+            id="daterange"
+            value=""
+            placeholder="Пользовательская"
+          />
         </div>
-
+        <div class="metrika-statistic mb-40">
+          <div class="statistic-blocks">
+            <div class="statistic-item">
+              <div class="statistic-top online">
+                <div class="img">
+                  <img src="img/online.svg" alt="" />
+                </div>
+                <div class="title"></div>
+                Онлайн
+              </div>
+              <div class="statistic-count">3 245</div>
+            </div>
+            <div class="statistic-item">
+              <div class="statistic-top">
+                <div class="img">
+                  <img src="img/phone.svg" alt="" />
+                </div>
+                <div class="title"></div>
+                По звонку
+              </div>
+              <div class="statistic-count">2 751</div>
+            </div>
+            <div class="statistic-item">
+              <div class="statistic-top">
+                <div class="img">
+                  <img src="img/cancel.svg" alt="" />
+                </div>
+                <div class="title"></div>
+                Отказов
+              </div>
+              <div class="statistic-count">56</div>
+            </div>
+          </div>
+          <div id="chart1" class="site-line-chart"></div>
+        </div>
+        <div class="metrika-clicks mb-60">
+          <div id="chart2" class="site-line-chart"></div>
+        </div>
+        <div class="metrika-columns mb-60">
+          <div class="column-item site-item">
+            <div class="column-title site-title">Запросы с результатами</div>
+            <div class="column-head">
+              <div class="column-head__title">Запрос</div>
+              <div class="column-head__count">Кол.</div>
+            </div>
+            <div class="column-wrap" id="popularWords">
+              <!-- <div class="column-list">
+                <div class="column-list__title">ноутбуки в ташкенте</div>
+                <div class="column-list__value">1554</div>
+              </div> -->
+            </div>
+          </div>
+          <div class="column-item site-item">
+            <div class="column-title site-title">Запросы с результатами</div>
+            <div class="column-head">
+              <div class="column-head__title">Запрос</div>
+              <div class="column-head__count">Кол.</div>
+            </div>
+            <div class="column-wrap" id="searchNoResult">
+              <!-- <div class="column-list">
+                <div class="column-list__title">honor</div>
+                <div class="column-list__value">1154</div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="metrika-pies mb-60">
+          <div class="pie-item site-item">
+            <div class="pie-title site-title">Запросы с результатами</div>
+            <div id="pie-chart1" class="site-pie-chart"></div>
+          </div>
+          <div class="pie-item site-item">
+            <div class="pie-title site-title">Тип устройства</div>
+            <div id="pie-chart2" class="site-pie-chart"></div>
+          </div>
+        </div>
+        <div class="metrika-visitors">
+          <div id="chart3" class="site-line-chart"></div>
+        </div>
+      </div>
     </div>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="js/chart.js"></script>
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

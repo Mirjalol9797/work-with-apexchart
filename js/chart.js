@@ -464,11 +464,51 @@ pieChart1();
 pieChart2();
 
 $(document).ready(function () {
+  // metrika visitors
   $.ajax({
     url: "https://metrika.texnomart.uz/visits-chart/1650353050-1651130650",
     type: "GET",
     success: function (data) {
       chart3(data);
+      // console.log(data);
+    },
+  });
+
+  // Самые популярные слова
+  $.ajax({
+    url: "https://metrika.texnomart.uz/search-with-results/1640998800-1651559591",
+    type: "GET",
+    success: function (data) {
+      let content = "";
+      for (let i = 0; i < data.length; i++) {
+        content += `
+        <div class="column-list">
+            <div class="column-list__title">${data[i].text}</div>
+            <div class="column-list__value">${data[i].count}</div>
+        </div>
+
+        `;
+      }
+      $("#popularWords").append(content);
+      // console.log(data);
+    },
+  });
+
+  // Результаты не найдены:
+  $.ajax({
+    url: "https://metrika.texnomart.uz/search-no-results/1640998800-1651559591",
+    type: "GET",
+    success: function (data) {
+      let content = "";
+      for (let i = 0; i < data.length; i++) {
+        content += `
+        <div class="column-list">
+          <div class="column-list__title">${data[i].text}</div>
+          <div class="column-list__value">${data[i].count}</div>
+        </div>
+        `;
+      }
+      $("#searchNoResult").append(content);
       console.log(data);
     },
   });
