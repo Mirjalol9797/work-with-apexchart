@@ -135,68 +135,24 @@ function chart1(response) {
 }
 
 // chart2 metrika clicks
-function chart2(response) {
+function chart2(line01, line02, line03, line04) {
   var options = {
     series: [
       {
         name: "В корзину",
-        data: [
-          { x: "01/10/2022", y: 10 },
-          { x: "02/10/2022", y: 20 },
-          { x: "03/10/2022", y: 30 },
-          { x: "04/10/2022", y: 85 },
-          { x: "05/10/2022", y: 47 },
-          { x: "06/10/2022", y: 65 },
-          { x: "07/10/2022", y: 18 },
-          { x: "08/10/2022", y: 4 },
-          { x: "09/10/2022", y: 74 },
-          { x: "10/10/2022", y: 50 },
-        ],
+        data: line01,
       },
       {
         name: "Оформит покупку",
-        data: [
-          { x: "01/10/2022", y: 74 },
-          { x: "02/10/2022", y: 58 },
-          { x: "03/10/2022", y: 41 },
-          { x: "04/10/2022", y: 96 },
-          { x: "05/10/2022", y: 47 },
-          { x: "06/10/2022", y: 14 },
-          { x: "07/10/2022", y: 10 },
-          { x: "08/10/2022", y: 54 },
-          { x: "09/10/2022", y: 36 },
-          { x: "10/10/2022", y: 41 },
-        ],
+        data: line02,
       },
       {
         name: "Оформления",
-        data: [
-          { x: "01/10/2022", y: 34 },
-          { x: "02/10/2022", y: 18 },
-          { x: "03/10/2022", y: 41 },
-          { x: "04/10/2022", y: 76 },
-          { x: "05/10/2022", y: 37 },
-          { x: "06/10/2022", y: 84 },
-          { x: "07/10/2022", y: 30 },
-          { x: "08/10/2022", y: 4 },
-          { x: "09/10/2022", y: 6 },
-          { x: "10/10/2022", y: 13 },
-        ],
+        data: line03,
       },
       {
         name: "Разрешено к оплату",
-        data: [
-          { x: "01/10/2022", y: 56 },
-          { x: "02/10/2022", y: 12 },
-          { x: "03/10/2022", y: 34 },
-          { x: "04/10/2022", y: 7 },
-          { x: "05/10/2022", y: 97 },
-          { x: "06/10/2022", y: 15 },
-          { x: "07/10/2022", y: 32 },
-          { x: "08/10/2022", y: 40 },
-          { x: "09/10/2022", y: 69 },
-          { x: "10/10/2022", y: 10 },
-        ],
+        data: line04,
       },
     ],
     chart: {
@@ -381,7 +337,7 @@ function chart3(response) {
 }
 
 // pie-chart1
-function pieChart1(response) {
+function pieChart1(labels, series) {
   var options = {
     series: [44, 55, 13, 43, 22],
     chart: {
@@ -459,11 +415,23 @@ function pieChart2(response) {
 }
 
 chart1();
-chart2();
+
 pieChart1();
 pieChart2();
 
 $(document).ready(function () {
+  // metrika clicks
+  $.ajax({
+    url: "https://metrika.texnomart.uz/click-chart/1640998800-1651559591",
+    type: "GET",
+    success: function (data) {
+      let line01 = data.line01;
+      let line02 = data.line02;
+      let line03 = data.line03;
+      let line04 = data.line04;
+      chart2(line01, line02, line03, line04);
+    },
+  });
   // metrika visitors
   $.ajax({
     url: "https://metrika.texnomart.uz/visits-chart/1650353050-1651130650",
@@ -509,7 +477,16 @@ $(document).ready(function () {
         `;
       }
       $("#searchNoResult").append(content);
-      console.log(data);
+      // console.log(data);
+    },
+  });
+
+  // pie-chart 1
+  $.ajax({
+    url: "https://metrika.texnomart.uz/search-chart/1640998800-1651559591",
+    type: "GET",
+    success: function (data) {
+      // console.log(data);
     },
   });
 });
