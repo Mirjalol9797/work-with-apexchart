@@ -291,18 +291,7 @@ function chart3(response) {
     series: [
       {
         name: "Посетители",
-        data: [
-          { x: "01/10/2022", y: 10 },
-          { x: "02/10/2022", y: 20 },
-          { x: "03/10/2022", y: 30 },
-          { x: "04/10/2022", y: 85 },
-          { x: "05/10/2022", y: 47 },
-          { x: "06/10/2022", y: 65 },
-          { x: "07/10/2022", y: 18 },
-          { x: "08/10/2022", y: 4 },
-          { x: "09/10/2022", y: 74 },
-          { x: "10/10/2022", y: 50 },
-        ],
+        data: response,
       },
     ],
     chart: {
@@ -471,6 +460,16 @@ function pieChart2(response) {
 
 chart1();
 chart2();
-chart3();
 pieChart1();
 pieChart2();
+
+$(document).ready(function () {
+  $.ajax({
+    url: "https://metrika.texnomart.uz/visits-chart/1650353050-1651130650",
+    type: "GET",
+    success: function (data) {
+      chart3(data);
+      console.log(data);
+    },
+  });
+});
