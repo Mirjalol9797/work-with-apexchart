@@ -337,16 +337,16 @@ function chart3(response) {
 }
 
 // pie-chart1
-function pieChart1(labels, series) {
+function pieChart1(series, labels) {
   var options = {
-    series: [44, 55, 13, 43, 22],
+    series: series,
     chart: {
       width: 420,
       type: "donut",
       fontFamily: "Roboto, sans-serif",
       foreColor: "#333",
     },
-    labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
+    labels: labels,
     legend: {
       position: "bottom",
     },
@@ -416,7 +416,6 @@ function pieChart2(response) {
 
 chart1();
 
-pieChart1();
 pieChart2();
 
 $(document).ready(function () {
@@ -486,7 +485,10 @@ $(document).ready(function () {
     url: "https://metrika.texnomart.uz/search-chart/1640998800-1651559591",
     type: "GET",
     success: function (data) {
-      // console.log(data);
+      let series = data.count;
+      let labels = data.text;
+
+      pieChart1(series, labels);
     },
   });
 });
